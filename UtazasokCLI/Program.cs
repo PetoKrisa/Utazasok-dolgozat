@@ -10,6 +10,19 @@ namespace UtazasokCLI
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Adatok:");
+            UtazasRepository.Path = "utazasok.csv";
+            UtazasRepository.SkipHeader = false;
+            List<Utazas> utazasok = UtazasRepository.FindAll();
+            foreach(var i in utazasok)
+            {
+                Console.WriteLine(i);
+            }
+            
+            
+
+            Console.ReadKey();
+
         }
     }
 }
